@@ -1,11 +1,14 @@
-var account = require('account')
+var Account = require('account')
 var mixin = require('simple-mixin')
 var register = require('./lib/register')
 var login = require('./lib/login')
 
-var accountCouch = {
-  login: login,
-  register: register
+var AccountCouch = function(db) {
+  this.db = db
 }
-mixin(account, accountCouch)
-module.exports = accountCouch
+AccountCouch.prototype = Object.create(Account)
+
+AccountCouch.prototype.register = register
+AccountCouch.prototype.login = login
+
+module.exports = AccountCouch

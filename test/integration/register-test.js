@@ -7,8 +7,8 @@ var configFilePath = require('optimist').demand('config').argv.config
 assert.ok(fs.existsSync(configFilePath), 'config file not found at path: ' + configFilePath)
 var config = require('nconf').env().argv().file({file: configFilePath})
 var db = require('cradle-nconf')(config)
-var accountCouch = require('../..')
-should.exist(accountCouch)
+var Account = require('../..')
+var account = new Account(db)
 describe('Register Integration', function () {
   this.timeout('20s')
   this.slow('10s')
@@ -28,8 +28,8 @@ describe('Register Integration', function () {
     var email = data.email
     removeForEmail(email, function (err) {
       should.not.exist(err)
-      should.exist(accountCouch.register)
-      accountCouch.register(data, function (err, reply) {
+      should.exist(account.register)
+      account.register(data, function (err, reply) {
         should.not.exist(err)
         should.exist(reply)
         should.exist(reply.email)
@@ -43,14 +43,14 @@ describe('Register Integration', function () {
     var email = data.email
     removeForEmail(email, function (err) {
       should.not.exist(err)
-      should.exist(accountCouch.register)
-      accountCouch.register(data, function (err, reply) {
+      should.exist(account.register)
+      account.register(data, function (err, reply) {
         should.not.exist(err)
         should.exist(reply)
         should.exist(reply.email)
         reply.email.should.eql(data.email)
         user2.email = data.email
-        accountCouch.register(user2, function (err, reply) {
+        account.register(user2, function (err, reply) {
           should.exist(err)
           err.message.should.eql('register failed, email is not unique')
           done()

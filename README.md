@@ -12,7 +12,7 @@ The account couch module exports `register` and `login` functions
 
 To register a new account, pass an `email`, `password` and a cradle `db` connection
 ```javascript
-var accountCouch = require('account-couch')
+var Account = require('account-couch')
 var config = require('nconf').defaults({
   couch: {
     host: 'localhost',
@@ -21,17 +21,19 @@ var config = require('nconf').defaults({
   }    
 })
 var db = require('cradle-nconf')(config)
+// create the account object with the cradle db passed as a parameter to the constructor
+var account = new Account(db)
 var data = {
   email: 'foo@example.com',
   password: 'barPassword',
   db: db
 }
-accountCouch.register(data, function (err, reply) {
+account.register(data, function (err, reply) {
   if (err) {
     inspect(err, 'error registering user account')
     return
   }
-  inspect(reply, 'account created correctly'
+  inspect(reply, 'user account created correctly'
 })
 ```
 
