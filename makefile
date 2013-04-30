@@ -8,6 +8,8 @@ wiring:
 	$(MOCHA) test/wiring-test.js --reporter $(REPORTER)
 register-wiring:
 	$(MOCHA) test/register-wiring-test.js --reporter $(REPORTER)
+login-wiring:
+	$(MOCHA) test/login-wiring-test.js --reporter $(REPORTER)
 
 integration:
 	$(MOCHA) $(shell find test/integration* -prune -name "*test.js") --config $(config) --reporter $(REPORTER)
