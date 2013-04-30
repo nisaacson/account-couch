@@ -1,0 +1,36 @@
+{
+  "name": "account-couch",
+  "version": "0.0.1",
+  "description": "Implement the accounts interface using a couchdb backend",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "''"
+  },
+  "keywords": [
+    "accounts",
+    "register",
+    "couch",
+    "couchdb",
+    "cradle"
+  ],
+  "author": "Noah Isaacson",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "simple-mixin": "0.0.1",
+    "account": "0.0.1"
+  },
+  "devDependencies": {
+    "eyespect": "~0.1.8",
+    "should": "~1.2.2",
+    "rewire": "~1.1.3",
+    "mocha": "~1.9.0"
+  }
+}
