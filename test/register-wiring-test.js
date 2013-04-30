@@ -2,7 +2,7 @@ var assert = require('assert')
 var should = require('should');
 var inspect = require('eyespect').inspector();
 var rewire = require('rewire')
-describe('Register Wiriing', function () {
+describe('Register Wiring', function () {
   var data
   beforeEach(function () {
     data = {

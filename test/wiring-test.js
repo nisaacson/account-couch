@@ -3,7 +3,7 @@ var should = require('should');
 var inspect = require('eyespect').inspector();
 var rewire = require('rewire')
 var accountCouch = require('../')
-describe('Account Couch Wiriing', function () {
+describe('Index Wiring', function () {
   it('should be wired up correctly', function (done) {
     var registerCalled = false
     var loginCalled = false
