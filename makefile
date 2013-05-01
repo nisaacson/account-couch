@@ -17,5 +17,7 @@ register:
 	$(MOCHA) test/integration/register-test.js --config $(config) --reporter $(REPORTER)
 login:
 	$(MOCHA) test/integration/login-test.js --config $(config) --reporter $(REPORTER)
+couch:
+	$(MOCHA) test/integration/couch-test.js --config $(config) --reporter $(REPORTER)
 
 .PHONY: test

@@ -38,6 +38,7 @@
     "optimist": "~0.4.0",
     "cradle-nconf": "~1.0.2",
     "nconf": "~0.6.7",
-    "async": "~0.2.7"
+    "async": "~0.2.7",
+    "account-test": "0.0.5"
   }
 }
