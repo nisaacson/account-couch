@@ -1,6 +1,6 @@
 {
   "name": "account-couch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Implement the accounts interface using a couchdb backend",
   "main": "index.js",
   "directories": {
