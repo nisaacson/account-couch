@@ -1,5 +1,5 @@
 MOCHA=node_modules/.bin/mocha
-REPORTER?=spec
+REPORTER?=tap
 config?=test/config.json
 test: unit integration
 unit:
