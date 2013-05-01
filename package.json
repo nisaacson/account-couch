@@ -25,10 +25,10 @@
   "readmeFilename": "README.md",
   "dependencies": {
     "simple-mixin": "0.0.1",
-    "account": "0.0.1",
     "required-keys": "~1.0.5",
     "couch-profile": "~1.0.16",
-    "bcrypt-nodejs": "0.0.3"
+    "bcrypt-nodejs": "0.0.3",
+    "account": "~1.0.0"
   },
   "devDependencies": {
     "eyespect": "~0.1.8",
@@ -39,6 +39,6 @@
     "cradle-nconf": "~1.0.2",
     "nconf": "~0.6.7",
     "async": "~0.2.7",
-    "account-test": "0.0.7"
+    "account-test": "~1.0.0"
   }
 }
