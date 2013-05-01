@@ -1,5 +1,7 @@
 # Account Couch
 Implement the account interface using a couchdb backend with the couch-profile module
+[![Build Status](https://travis-ci.org/nisaacson/account-couch.png?branch=master)](https://travis-ci.org/nisaacson/account-couch)
+[![Dependency Status Status](https://david-dm.org/nisaacson/account-couch.png)](https://david-dm.org/nisaacson/account-couch)
 
 # Installation
 

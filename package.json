@@ -1,6 +1,6 @@
 {
   "name": "account-couch",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Implement the accounts interface using a couchdb backend",
   "main": "index.js",
   "directories": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "''"
+    "url": "git://github.com/nisaacson/account-couch.git"
   },
   "keywords": [
     "accounts",
